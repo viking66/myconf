@@ -2,7 +2,7 @@ My collection of dotfiles
 =========================
 Setup
 -----
-This only need to be done if you're starting from scratch. If you're looking to clone/restore your dotfiles skip this section and see [Cloning](#cloning) below.
+This only needs to be done if you're starting from scratch. If you're looking to clone/restore your dotfiles, skip this section and see [Cloning](#cloning) below.
 ``` bash
 git init --bare $HOME/.myconf
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
