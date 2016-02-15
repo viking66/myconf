@@ -16,9 +16,20 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias vi='vim'
 alias tmux='tmux -2'
+alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export EDITOR=vim
 
-source ~/.git-completion.bash
+if [ -e /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/bash_completion
+fi
+
+if [ -e /usr/share/git/completion/git-completion.bash ]; then
+    source /usr/share/git/completion/git-completion.bash
+fi
+
+if [ -e /home/jason/.heroku/plugins/heroku-bash-completion/heroku-completion.bash ]; then
+    source "/home/jason/.heroku/plugins/heroku-bash-completion/heroku-completion.bash"
+fi
 
 export HISTFILESIZE=
 export HISTSIZE=
@@ -26,7 +37,7 @@ export HISTFILE=~/.bash_eternal_history
 export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
-#PATH="~/bin:$PATH"
+PATH="~/bin:$PATH"
 
 prompt_command () {
     local rts=$?
