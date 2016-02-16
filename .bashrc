@@ -19,18 +19,6 @@ alias tmux='tmux -2'
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export EDITOR=vim
 
-if [ -e /usr/share/bash-completion/bash_completion ]; then
-    source /usr/share/bash-completion/bash_completion
-fi
-
-if [ -e /usr/share/git/completion/git-completion.bash ]; then
-    source /usr/share/git/completion/git-completion.bash
-fi
-
-if [ -e /home/jason/.heroku/plugins/heroku-bash-completion/heroku-completion.bash ]; then
-    source "/home/jason/.heroku/plugins/heroku-bash-completion/heroku-completion.bash"
-fi
-
 export HISTFILESIZE=
 export HISTSIZE=
 export HISTFILE=~/.bash_eternal_history
@@ -38,6 +26,14 @@ export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 
 PATH="~/bin:$PATH"
+
+include () {
+    test -f "$1" && source "$1"
+}
+
+include "/usr/share/bash-completion/bash_completion"
+include "/usr/share/git/completion/git-completion.bash"
+include "/home/jason/.heroku/plugins/heroku-bash-completion/heroku-completion.bash"
 
 prompt_command () {
     local rts=$?
@@ -51,8 +47,6 @@ prompt_command () {
     [ $rts -eq 0 ] && \
     local p="\[\033[0;36m\]>\[\033[1;36m\]>\[\033[m\]" || \
     local p="\[\033[0;31m\]>\[\033[1;31m\]>\[\033[m\]"
-    local rt="\[\033[0:32m\][\u@\h]"
-    # PS1="${rt} ${w} ${p} "
     PS1="${w} ${p} "
     history -a; history -c; history -r
 }
