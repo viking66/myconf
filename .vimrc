@@ -15,7 +15,8 @@ call plug#begin('~/.vim/plugged')
 "" Plugins to install
 Plug 'ervandew/supertab'
 Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
 Plug 'scrooloose/syntastic'
