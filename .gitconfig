@@ -16,6 +16,7 @@
 	default = simple
 [alias]
 	d = difftool
+    m = merge --ff-only
     st = status -sb
     ci = commit
     br = branch

@@ -181,6 +181,8 @@ nmap <leader>x :exec &cuc && &cul ? "set nocuc nocul" : "set cuc cul"<CR>
 nmap <leader>w :%s/\s\+$//g<CR>
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
+xnoremap < <gv
+xnoremap > >gv
 
 "" Auto reload vimrc when changes are saved
 augroup reload_vimrc " {
