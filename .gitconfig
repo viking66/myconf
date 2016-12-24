@@ -1,33 +1,33 @@
 [core]
-	trustctime = false
-	pager = less -FMRiX
+    trustctime = false
+    pager = less -FMRiX
 [user]
     name = Jason Davidson
     email = jad658@gmail.com
 [core]
     editor = vim
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
 [merge]
-	tool = vimdiff
+    tool = vimdiff
 [push]
-	default = simple
+    default = simple
 [alias]
-	d = difftool
+    d = difftool
     m = merge --ff-only
     st = status -sb
     ci = commit
     br = branch
     co = checkout
-    com = "!f() { git checkout -b $1 -t origin/mainline; }; f"
+    com = "!f() { git checkout -b $1 -t origin/master; }; f"
     save = "!f() { git stash save $1$(date +'(%Y.%m.%d %H:%M)'); }; f"
     sync = pull --rebase
     ctags = !.git/hooks/ctags
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	lgg = log --color --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-abbrev-commit --
-	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    lgg = log --color --graph --pretty=format:'%Cred%H%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --no-abbrev-commit --
+    dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 [color]
     ui = true
     diff = auto
@@ -36,4 +36,4 @@
 [init]
     templatedir = ~/.git_template
 [credential]
-	helper = cache
+    helper = cache
