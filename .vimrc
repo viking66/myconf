@@ -19,7 +19,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'whatyouhide/vim-gotham'
-Plug 'scrooloose/syntastic'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-commentary'
 Plug 'luochen1990/rainbow'
@@ -44,6 +43,7 @@ set autoread
 set lazyredraw
 set noerrorbells
 set timeout timeoutlen=1000 ttimeoutlen=100
+set encoding=utf-8
 
 "" Adding some color to vim
 :syntax enable

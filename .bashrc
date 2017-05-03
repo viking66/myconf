@@ -13,10 +13,10 @@ export GREP_COLOR="1;33"
 export LESS="-R"
 
 alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+# alias grep='grep --color=auto'
 alias vi='vim'
 alias tmux='tmux -2'
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+alias config='git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 export EDITOR=vim
 
 export HISTFILESIZE=
